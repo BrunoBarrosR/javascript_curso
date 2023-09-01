@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasilidade</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+            background-color: black;
+            color: antiquewhite;
+
+        }
+        input {
+            font: normal 10pt Arial;
+            background-color: rgb(3, 66, 47);
+            color: antiquewhite;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>EM QUAL PAÍS?</h1>
+    <p><strong>Você nasceu em qual país?</strong></p>
+    <input type="text" name="txt" id="txt">
+    <input type="button" value=" VERIFICAR " onclick="verificar()">
+    <div id="resp">
+
+    </div>
+    
+    <script>
+        function verificar() {
+            var texto = window.document.querySelector('input#txt').value
+            var resp = window.document.querySelector('div#resp')
+                                    
+            resp.innerHTML = `<p>Nascido em ${texto}</p>`
+            if (texto == 'Brasil') {
+                resp.innerHTML += `<p>Você é Brasileiro</p>`
+            } else {
+                resp.innerHTML += `<p>Você é Estrangeiro</p>`
+            }
+                
+        
+        }
+    </script>
+</body>
+
+</html>
