@@ -7,6 +7,6 @@ for (let c = 0; c < valores.length; c++) {
 
 
 for (let pos in valores) {
-    console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
+     console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
 }
 
