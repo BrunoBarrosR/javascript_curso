@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome e idade</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-color: yellowgreen;
+
+        }
+
+        h1 {
+            color: rgb(0, 43, 70);
+            
+        }
+
+        input#nome {
+            background-color: rgb(96, 40, 0);
+            color: blanchedalmond;
+        }
+
+        input#anonas {
+            background-color: rgb(15, 15, 128);
+            color: blanchedalmond;
+        }
+
+        input#botao {
+            background-color: black;
+            color: antiquewhite;
+        }
+        div#res {
+            background-color: black;
+            color: yellowgreen;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nome e idade!</h1>
+    <p>Qual é o seu nome?</p>
+    <input type="text" name="nome" id="nome">
+    <p>Que ano você nasceu?</p>
+    <input type="number" name="anonas" id="anonas">
+    <input type="button" id="botao" value="Verificar" onclick="verificar()">
+
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            const dataAtual = new Date();
+            const anoAtual = dataAtual.getFullYear();
+            var nome = document.querySelector('#nome')
+            var nasc = document.querySelector('#anonas')
+            var anoNasc = Number(nasc.value)
+            var idade = anoAtual - anoNasc
+            var res = document.querySelector('#res')
+            res.innerHTML = `Seu nome é ${nome.value} e você possui ${idade} anos.`
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(5, 59, 95);
+    color: antiquewhite;
+    font: normal 15pt Arial;
+}
+
+header {
+    color: antiquewhite;
+    text-align: center;
+}
+
+section {
+    background-color: antiquewhite;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 25px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.596);
+
+}
+
+select#flista{
+    width: 150px;
+}
+
+footer {
+    color: antiquewhite;
+    text-align: center;
+    font-style: italic;
+}
